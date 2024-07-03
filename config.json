@@ -1,0 +1,14 @@
+{
+    "Server": {
+        "host": "",
+        "FrontPort": 8080,
+        "BackPort": 3000
+    },
+    "database": {
+        "host" :"",
+        "port":"3306",
+        "user":"rplace",
+        "password":"1234",
+        "database":"rplace"
+    }
+}
