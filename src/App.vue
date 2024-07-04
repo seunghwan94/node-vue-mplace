@@ -2,10 +2,10 @@
   <div id="app">
     <MainHeader :is_main="is_main" @BackButton="BackButton" @testButton="testButton"/>
     <div v-if="is_main==0" style="margin-top:20px;display:flex;align-items: center;flex-direction: column;">
-      <p>Raddit 사이트에서 운영한 r/Place를 카피한 사이트 입니다.</p>
+      <p>Reddit 사이트에서 운영한 r/Place를 카피한 사이트 입니다.</p>
       <div style="width: 80%;">
         <video ref="video" src="./assets/video.mp4" autoplay muted loop playsinline class="video-style"></video>
-        <p style="margin:0px;"><a href="https://www.reddit.com/r/place/">출처 [Raddit 공식사이트 ]</a></p>
+        <p style="margin:0px;"><a href="https://www.reddit.com/r/place/">출처 [Reddit 공식사이트 ]</a></p>
         <button class="start-button" @click="startButton">m/Place Start</button>
       </div>
     </div>

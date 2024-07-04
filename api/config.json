@@ -1,0 +1,14 @@
+{
+    "Server": {
+        "host": "magolee.shop",
+        "FrontPort": 80,
+        "BackPort": 3000
+    },
+    "database": {
+        "host" :"172.26.224.1",
+        "port":"3306",
+        "user":"mPlace",
+        "password":"1234",
+        "database":"mPlace"
+    }
+}

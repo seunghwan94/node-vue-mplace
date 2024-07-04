@@ -3,7 +3,7 @@ const http = require('http');
 const cors = require('cors');
 const { Server } = require('socket.io');
 const mariadb = require('mysql');
-const ServerHost = require('../config.json');
+const ServerHost = require('./config.json');
 
 // 데이터베이스 연결 설정
 const conn = mariadb.createConnection({
@@ -19,7 +19,7 @@ const server = http.createServer(app);
 
 // CORS 설정 객체 정의
 const corsOptions = {
-  origin: `http://${ServerHost.Server.host}:${ServerHost.Server.FrontPort}`,
+  origin: `http://${ServerHost.Server.host}`,
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
 };
@@ -27,7 +27,7 @@ const corsOptions = {
 const io = new Server(server, {
   cors: corsOptions
 });
-
+console.log(corsOptions);
 // Express에 CORS 설정 적용
 app.use(cors(corsOptions));
 app.use(express.json());

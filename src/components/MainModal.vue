@@ -1,40 +1,47 @@
 <template>
   <div>
-      <div class="main-body">
-        <div class="help-icon-container">
-          <div class="help-icon" @click="openModal">?</div>
-        </div>
-        <div id="modal" class="modal" @click.self="closeModal">
-          <div class="modal-content" @click.stop>
-              <span class="close" @click="closeModal">&times;</span>
-              <p style="font-weight: bold;font-size: 24px;">m/place-Korea 규칙</p>
-              <p>1. 원하는 색상을 정해 픽셀을 찍는다.</p>
-              <p>2. 5초에 한번씩 픽셀을 찍을 수 있다.</p>
-              <p>3. 플레이시간은 아침 09:00 ~ 18:00 까지</p>
-              <p style="color: gray; font-size: 14px;">TMI. URL이 magolee.shop 인 이유 : 값이 싸서</p>
-              <p style="margin-top: 45px;color: red;">※ 색상 클릭이 안되는 경우 선택 버튼 말고 색깔 부분 클릭하면 됨</p>
-              <p style="width: 10px;height: 10px;" @click="testButton"> </p>
-          </div>
+    <div class="main-body">
+      <div class="help-icon-container">
+        <div class="help-icon" @click="openModal">?</div>
+      </div>
+      <div id="modal" class="modal" @click.self="closeModal">
+        <div class="modal-content" @click.stop>
+          <span class="close" @click="closeModal">&times;</span>
+          <p style="font-weight: bold;font-size: 24px;">m/place-Korea 규칙</p>
+          <p>1. 원하는 색상을 정해 픽셀을 찍는다.</p>
+          <p>2. 5초에 한번씩 픽셀을 찍을 수 있다.</p>
+          <p>3. 플레이시간은 아침 09:00 ~ 18:00 까지</p>
+          <p style="color: gray; font-size: 14px;">TMI. URL이 magolee.shop 인 이유 : 값이 싸서</p>
+          <p style="margin-top: 45px;color: red;">※ 색상 클릭이 안되는 경우 선택 버튼 말고 색깔 부분 클릭하면 됨</p>
+          <p style="width: 10px;height: 10px;" @click="testButton"> </p>
         </div>
       </div>
+    </div>
   </div>
 </template>
+
 <script>
 export default {
-  props:{
+  props: {
     is_main: Number,
   },
   methods: {
     openModal() {
+      console.log('test');
       document.getElementById('modal').style.display = 'block';
     },
-    testButton() {
+    closeModal() {
       document.getElementById('modal').style.display = 'none';
+    },
+    testButton() {
+      console.log('test2');
+      this.closeModal();
       this.$emit('testButton');
     }
   }
 };
 </script>
+
 <style>
 /* 기존 스타일 */
 .main-body {

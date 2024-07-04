@@ -21,7 +21,6 @@
 
 <script>
 import { io } from 'socket.io-client';
-import Server from '../../config.json';
 
 export default {
   name: 'MainView',
@@ -39,7 +38,7 @@ export default {
   mounted() {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    const socket = io(`${Server.Server.host}:${Server.Server.BackPort}`);
+    const socket = io(`http://magolee.shop:3000`);
     const canvasSize = 50;
 
     const setCanvasSize = () => {
