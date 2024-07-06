@@ -36,7 +36,7 @@ CREATE TABLE canvas_pixels_log (
 );
 ```
 
-### 서버 열기 (BackEnd, FrontEnd 실행해야 됨)
+### 서버 실행 (BackEnd, FrontEnd 실행해야 됨)
 ```
 npm run serve
 node api/server.js
