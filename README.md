@@ -1,24 +1,43 @@
-# rplace
+# m/place 
+Reddit에서 진행한 이벤트 r/place 모방한 짝퉁 사이트 m/place
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### mPlace/api/config.json 수정
+```
+{
+    "Server": {
+        "host": "",
+        "FrontPort": ,
+        "BackPort": 
+    },
+    "database": {
+        "host" :"",
+        "port":"",
+        "user":"",
+        "password":"",
+        "database":""
+    }
+}
+```
+
+### DB 테이블 셋팅
+```
+CREATE TABLE canvas_pixels_log (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    x INT,
+    y INT,
+    color VARCHAR(7),
+    ip_addr VARCHAR(50),
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### 서버 열기 (BackEnd, FrontEnd 실행해야 됨)
 ```
 npm run serve
+node api/server.js
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
