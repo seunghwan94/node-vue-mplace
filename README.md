@@ -1,6 +1,9 @@
 # m/place 
 Reddit에서 진행한 이벤트 r/place 모방한 짝퉁 사이트 m/place
 
+### 동영상
+[https://youtube.com/shorts/Rj8UQSbKMVA](https://youtube.com/shorts/Rj8UQSbKMVA?si=LryFGDX1n_2fb_4w)
+
 ## Project setup
 ```
 npm install
